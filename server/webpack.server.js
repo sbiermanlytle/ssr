@@ -24,7 +24,13 @@ module.exports = {
         ],
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            presets: [
+              require.resolve('@babel/preset-react'),
+              require.resolve('@babel/preset-env')
+            ]
+          }
         }
       }
     ]
